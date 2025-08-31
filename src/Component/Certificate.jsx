@@ -8,11 +8,18 @@ export default function Certificates() {
   ];
 
   return (
-<section id="certificates" className="py-20 bg-white text-center">
-      <h2 className="text-3xl font-bold mb-10">Certificates</h2>
-      <div className="flex flex-wrap justify-center gap-6">
+    <section id="certificates" className="py-20 bg-gray-900 text-white text-center px-6">
+      <h2 className="text-3xl font-bold mb-10 text-indigo-400">&lt;Certificates /&gt;</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {certificates.map((cert, idx) => (
-          <a key={idx} href={cert.link} target="_blank" className="px-6 py-3 bg-gray-200 rounded-lg shadow hover:bg-teal-400 hover:text-white transition">
+          <a
+            key={idx}
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 hover:bg-indigo-500 hover:text-white transition block"
+          >
             {cert.title}
           </a>
         ))}
