@@ -8,17 +8,16 @@ export default function Contact() {
         Feel free to reach out — I’ll get back to you as soon as possible!
       </p>
 
-      {/* Contact Buttons */}
       <div className="flex flex-wrap justify-center gap-6 mb-8">
         <a
           href="mailto:work.priyanshu2711@gmail.com"
-          className="px-6 py-3 bg-indigo-600 rounded-lg shadow hover:bg-indigo-500 transition"
+          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 hover:scale-105 transition transform"
         >
           📧 Email Me
         </a>
         <a
           href="tel:9811328321"
-          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 transition"
+          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 hover:scale-105 transition transform"
         >
           📞 Call Me
         </a>
@@ -26,7 +25,7 @@ export default function Contact() {
           href="https://github.com/Priyanshu271104"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 transition"
+          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 hover:scale-105 transition transform"
         >
           💻 GitHub
         </a>
@@ -34,13 +33,12 @@ export default function Contact() {
           href="https://linkedin.com/in/priyanshuuniyal"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 transition"
+          className="px-6 py-3 bg-gray-800 rounded-lg shadow hover:bg-indigo-500 hover:scale-105 transition transform"
         >
           🔗 LinkedIn
         </a>
       </div>
 
-      {/* Extra Content */}
       <div className="max-w-2xl mx-auto text-gray-400 text-sm">
         <p>
           💡 Currently open to internships and freelance opportunities in Web & App Development.  

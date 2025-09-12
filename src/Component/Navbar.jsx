@@ -1,63 +1,55 @@
 import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const links = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
-    { name: "Certificates", href: "#certificates" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const links = ["hero", "about", "projects", "skills", "experience", "achievements", "certificates", "contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        
-        {/* Logo */}
-        <h1 className="text-xl font-bold text-teal-400">Priyanshu Uniyal</h1>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6">
-          {links.map((link, i) => (
-            <li key={i}>
-              <a href={link.href} className="hover:text-teal-400 transition">
-                {link.name}
-              </a>
-            </li>
+    <nav className="fixed w-full bg-gray-950 z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+        <h1 className="text-2xl font-bold text-indigo-400 cursor-pointer">Priyanshu</h1>
+        <div className="hidden md:flex gap-6">
+          {links.map((link) => (
+            <ScrollLink
+              key={link}
+              to={link}
+              smooth={true}
+              duration={500}
+              spy={true}        // tracks active section
+              offset={-80}      // adjust if navbar height overlaps
+              className="text-gray-300 hover:text-indigo-400 cursor-pointer transition"
+              activeClass="text-indigo-400 font-semibold"
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </ScrollLink>
           ))}
-        </ul>
+        </div>
 
-        {/* Mobile Button */}
-        <button
-          className="md:hidden flex flex-col gap-1"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
-        </button>
+        {/* Mobile Menu */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-indigo-400 text-2xl">
+            {isOpen ? "✖" : "☰"}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800">
-          <ul className="flex flex-col items-center gap-4 py-6">
-            {links.map((link, i) => (
-              <li key={i}>
-                <a
-                  href={link.href}
-                  className="hover:text-teal-400 transition"
-                  onClick={() => setIsOpen(false)} // close menu when link clicked
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <div className="md:hidden bg-gray-950 flex flex-col gap-4 py-4 px-6 transition-all duration-300">
+          {links.map((link) => (
+            <ScrollLink
+              key={link}
+              to={link}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="text-gray-300 hover:text-indigo-400 cursor-pointer transition"
+              activeClass="text-indigo-400 font-semibold"
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </ScrollLink>
+          ))}
         </div>
       )}
     </nav>
