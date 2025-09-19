@@ -47,7 +47,7 @@ export default function Projects() {
     {
       title: "Weather App",
       desc: "Responsive web app providing real-time weather data worldwide using OpenWeatherMap API.",
-      link: "https://priyanshu271104.github.io/PRODIGY_WD_04/"
+      link: "https://priyanshu271104.github.io/Weather-App/"
     }
   ];
 
