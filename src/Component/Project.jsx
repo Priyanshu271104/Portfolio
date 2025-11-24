@@ -40,9 +40,9 @@ export default function Projects() {
       link: null // not live yet
     },
     {
-      title: "Irfan’s Study Circle Website",
-      desc: "Modern responsive website for an educational startup, highlighting services, resources, and enrollment options.",
-      link: "https://www.irfansstudycircle.com/"
+  title: "SecurePass — Modern Password Generator",
+  desc: "A sleek, Tailwind-styled React password generator with manual generate/reset, copy-to-clipboard, show/hide, length slider, number/symbol toggles and a visual strength meter (Very Weak → Strong). Built with hooks and accessibility in mind.",
+  link: "https://password-generator-priyanshu.vercel.app"
     },
     {
       title: "Weather App",
