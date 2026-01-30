@@ -17,7 +17,7 @@ export default function Hero() {
     );
 
     // Typewriter effect with blinking cursor
-    const text = "Full Stack Developer | CSE Student | Problem Solver";
+    const text = "Application Developer | Full Stack Developer | CSE Student | Problem Solver";
     let i = 0;
     const cursor = "|";
     const interval = setInterval(() => {
