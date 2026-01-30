@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-gray-950 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-        <h1 className="text-2xl font-bold text-indigo-400 cursor-pointer">Priyanshu</h1>
+        <h1 className="text-2xl font-bold text-indigo-400 cursor-pointer">Priyanshu Uniyal</h1>
         <div className="hidden md:flex gap-6">
           {links.map((link) => (
             <ScrollLink
