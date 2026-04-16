@@ -47,7 +47,7 @@ export default function Projects() {
     {
       title: "EduTech LMS App",
       desc: "Built a role-based mobile application with authentication, content management, and student-specific access, streamlining operations for educational workflows.",
-      link: null
+      link: "https://play.google.com/store/apps/details?id=com.irfan.studycircle"
     }
   ];
 
